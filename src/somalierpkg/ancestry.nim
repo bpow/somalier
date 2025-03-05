@@ -79,7 +79,7 @@ proc ancestry_main*() =
   if argv[0] == "ancestry": argv = argv[1..argv.high]
   if argv.len == 0: argv = @["-h"]
 
-  var p = newParser("somalier pca"):
+  var p = newParser("somalier ancestry"):
     help("dimensionality reduction")
     option("--labels", help="file with ancestry labels")
     option("-o", "--output-prefix", help="prefix for output files", default="somalier-ancestry")
